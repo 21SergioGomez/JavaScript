@@ -1,0 +1,219 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Juego de la vida</title>
+
+
+    <style type="text/css">
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        #titulo {
+            text-align: center;
+            font-family: "Sixtyfour", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 4em;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings: "BLED" 0, "SCAN" 0;
+        }
+
+        #formulario {
+            text-align: center;
+            margin-top: 4%;
+        }
+
+        #contenedor_general {
+            display: flex;
+            justify-content: center;
+        }
+
+        #contenedor1,
+        #contenedor2 {
+            margin-right: 20px;
+            /* Adjust the spacing between the input containers */
+        }
+
+        input {
+            margin-top: 3%;
+            font-family: "Workbench", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "BLED" 0,
+                "SCAN" 0;
+        }
+
+        #tablero {
+            margin: auto;
+            border-collapse: collapse;
+            background-color: black;
+            margin: 1%;
+        }
+
+        #tablero,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .viva {
+            background-color: #86eb34;
+        }
+
+        .morta {
+            background-color: black;
+        }
+
+        .estilos_input {
+            border-bottom: 1px solid black;
+            font-size: 2em;
+            font-family: "Workbench", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "BLED" 0,
+                "SCAN" 0;
+        }
+
+        #boton {
+            width: 70%;
+            text-align: center;
+            height: 40px;
+            font-size: 1.5em;
+        }
+
+        .celdas {
+            white-space: nowrap;
+            display: inline-block;
+            margin: 2%;
+            font-size: 1.1em;
+            font-family: "Workbench", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "BLED" 0,
+                "SCAN" 0;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        let intervalId;
+        let celdamuerta = 0;
+        let celdanueva = 0;
+        function iniciarjuego() {
+            var filas = document.getElementById("filas").value;
+            var columnas = document.getElementById("columnas").value;
+            var tabla = document.getElementById("tablero");
+            celdamuerta = 0;
+            celdanueva = 0;
+            document.getElementById("tablero").innerHTML = "";
+
+            for (var i = 0; i < filas; i++) {
+                var nuevaFila = tabla.insertRow();
+
+                for (var j = 0; j < columnas; j++) {
+
+                    var celda = nuevaFila.insertCell();
+                    celda.style.width = "10px";
+                    celda.style.height = "10px";
+
+                    let rand = Math.floor(Math.random() * 10);
+                    if (rand < 7) {
+                        celda.classList.add("morta");
+                    } else {
+                        celda.classList.add("viva");
+                    }
+                }
+            }
+            clearInterval(intervalId);
+            intervalId = setInterval(turnonuevo, 99);
+        }
+
+        function turnonuevo() {
+            var taula = document.getElementById("tablero");
+            var filas = document.getElementById("filas").value;
+            var columnas = document.getElementById("columnas").value;
+
+            for (var i = 0; i < filas; i++) {
+                for (let j = 0; j < columnas; j++) {
+
+                    let contador = 0;
+
+                    // Obtener la celda actual
+                    var celda = taula.rows[i].cells[j];
+
+                    // Verificar las celdas vecinas
+                    for (let x = i - 1; x <= i + 1; x++) {
+                        for (let y = j - 1; y <= j + 1; y++) {
+                            // Evitar bordes y la celda actual
+                            if (x >= 0 && x < filas && y >= 0 && y < columnas && !(x === i && y === j)) {
+                                if (taula.rows[x].cells[y].classList.contains('viva')) {
+                                    contador++;
+                                }
+                            }
+                        }
+                    }
+                    // Aplicar reglas del juego
+                    if (celda) {
+                        if (celda.classList.contains("morta") && contador === 3) {
+                            celda.classList.remove("morta");
+                            celda.classList.add("viva");
+                            celdanueva++;
+                            document.getElementById("nuevas").innerHTML = "Celdas <strong>nuevas: </strong>" + celdanueva;
+                        } else if (celda.classList.contains("viva") && (contador < 2 || contador > 3)) {
+                            celda.classList.remove("viva");
+                            celda.classList.add("morta");
+                            celdamuerta++;
+                            document.getElementById("muertas").innerHTML = "  Celdas <strong>muertas: </strong>" + celdamuerta;
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1 id="titulo">Juego de la vida</h1>
+    <form id="formulario">
+        <div id="contenedor_general">
+            <div id="contenedor1">
+                <label class="estilos_input" for="filas">Filas</label><br>
+                <input type="number" id="filas" name="filas"><br><br>
+            </div>
+            <div id="contenedor2">
+                <label class="estilos_input" for="columnas">Columnas</label><br>
+                <input type="number" id="columnas" name="columnas"><br><br>
+            </div>
+        </div>
+        <input id="boton" type="button" value="Enviar" onclick="iniciarjuego()"><br><br>
+        <label class="celdas" id="nuevas"></label>
+        <label class="celdas" id="muertas"></label>
+    </form>
+    <table id="tablero"></table>
+
+</body>
+
+</html>
