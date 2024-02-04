@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&family=Workbench&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Juego de la vida</title>
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <h1 id="titulo">Juego de la vida</h1>
+    <form id="formulario">
+        <div id="contenedor_general">
+            <div id="contenedor1">
+                <label class="estilos_input" for="filas">Filas</label><br>
+                <input type="number" id="filas" name="filas"><br><br>
+            </div>
+            <div id="contenedor2">
+                <label class="estilos_input" for="columnas">Columnas</label><br>
+                <input type="number" id="columnas" name="columnas"><br><br>
+            </div>
+        </div>
+        <input id="boton" type="button" value="Enviar" onclick="iniciarJuego()"><br><br>
+        <label class="celdas" id="nuevas"></label>
+        <label class="celdas" id="muertas"></label>
+    </form>
+    <table id="tablero"></table>
+
+</body>
+
+</html>

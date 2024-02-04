@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#titulo {
+    text-align: center;
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 4em;
+    font-weight: 400;
+    font-variation-settings: "BLED" 0, "SCAN" 0;
+}
+
+#formulario {
+    text-align: center;
+    margin-top: 4%;
+}
+
+#contenedor_general {
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor1,
+#contenedor2 {
+    margin-right: 20px;
+}
+
+input {
+    margin-top: 3%;
+    font-family: "Workbench", sans-serif;
+}
+
+#tablero {
+    margin: auto;
+    border-collapse: collapse;
+    margin: 1%;
+}
+
+#tablero,
+th,
+td {
+    border: 1px solid black;
+}
+
+.viva {
+    background-color: #86eb34;
+}
+
+.morta {
+    background-color: black;
+}
+
+.estilos_input {
+    border-bottom: 1px solid black;
+    font-size: 2em;
+    font-family: "Workbench", sans-serif;
+}
+
+#boton {
+    width: 70%;
+    height: 40px;
+    font-size: 1.5em;
+}
+
+.celdas {
+    white-space: nowrap;
+    display: inline-block;
+    margin: 2%;
+    font-size: 1.1em;
+    font-family: "Workbench", sans-serif;
+}
