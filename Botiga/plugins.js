@@ -1,28 +1,17 @@
 $(document).ready(function () {
-
     //Puglin SELECTABLE
     $('#producto').hide();
     botonClicado = false;
     console.log(botonClicado);
-    // Inicializar la función selectable en la lista de categorías
     $('#selectable').selectable({
-        // Al seleccionar un elemento de la lista
         selected: function (event, ui) {
-            // Obtener la categoría seleccionada
-            var categoria = $(ui.selected).data('categoria');
-
-            // Si la categoría seleccionada es "producto"
+            let categoria = $(ui.selected).data('categoria');
             if (categoria === "producto") {
-                // Ocultar el botón "Todos"
                 $('#producto').fadeOut();
-                // Mostrar todos los elementos de producto
                 $('.producto').fadeIn();
             } else {
-                // Ocultar todos los elementos de producto
                 $('.producto').fadeOut();
-                // Mostrar solo los elementos de la categoría seleccionada
                 $('.producto[data-categoria="' + categoria + '"]').fadeIn();
-                // Mostrar el botón "Todos" si estaba oculto
                 $('#producto').fadeIn();
             }
         }
@@ -44,20 +33,15 @@ $(function () {
         width: 600,
         modal: true,
     });
-
-    // Manejar clics en las imágenes para abrir el diálogo
     $('.producto').on('click', function () {
-        // Obtener el índice del producto clicado
-        var index = $('.producto').index(this);
-        // Abrir el diálogo correspondiente
+        let index = $('.producto').index(this);
         $(".dialog").eq(index).dialog("open");
     });
 });
 
 //Effect add class
-
 $(function () {
-    var state = true;
+    let state = true;
     $(".boton_dialogo").on("click", function () {
         if (state) {
             $(".producto_comp").animate({

@@ -2,8 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 #feedback {
@@ -16,7 +14,6 @@ body {
 
 #selectable .ui-selected {
   background: #EF5523;
-
   color: black;
 }
 
@@ -72,16 +69,7 @@ body {
 
 }
 
-.submenu {
-  display: contents;
-  color: rgb(182, 182, 182);
-}
-
-.submenu2 {
-  display: flex;
-}
-
-#menuproductos {
+#menuProductos {
   margin-top: 2%;
   width: 100%;
 }
@@ -163,7 +151,8 @@ body {
 }
 
 #logo_footer {
-  margin-top: 14%;
+  margin-bottom: 5%;
+  margin-top: 1%;
 }
 
 #footer p {

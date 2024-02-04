@@ -3,16 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
+    <title>Llibreria</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>Llibreria</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="Https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
-    <link rel="stylesheet" href="Htttps:/resources/demos/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="plugins.js"></script>
@@ -21,9 +18,11 @@
 
 <body>
     <div id="header">
-        <a href="tienda.html"><img id="logo" src="img_presentacion/logo.png" width="90px" /></a>
+        <img id="logo" src="img/logo.png" width="90px" />
     </div>
-    <input id="buscador" placeholder="cercar...">
+
+    <input id="buscador" placeholder="Cercar...">
+
     <ul id="menu">
         <li>
             <div>Inici</div>
@@ -40,9 +39,11 @@
             <div>Contacte</div>
         </li>
     </ul>
-    <div id="menuproductos">
+
+    <div id="menuProductos">
         <h1 class="titulo">LLIBRES RELLEVANTS</h1>
         <h2 class="subtitulo">CATEGORIES RELLEVANTS</h2>
+
         <ol id="selectable">
             <li class="categories" data-categoria="tendencia" class="ui-widget-content">Tendències</li>
             <li class="categories" data-categoria="flora-fauna" class="ui-widget-content">Flora i fauna</li>
@@ -52,30 +53,30 @@
             <li class="categories" data-categoria="classics" class="ui-widget-content">Clàssics</li>
             <li class="categories" data-categoria="fantasia" class="ui-widget-content">Fantasia</li>
             <li id="producto" data-categoria="producto" class="ui-widget-content">Todos</li>
-
         </ol>
+
         <div id="productos">
+
             <div class="producto opener" data-categoria="tendencia" data-categoria="producto">
-                <img src="img_presentacion/producto1.png" alt="Producto 1" width="150px" height="210px">
+                <img src="img/producto1.png" alt="Producto 1" width="150px" height="210px">
                 <p>Neon Genesis Evangelion</p>
                 <p>Precio: 22.80€</p>
             </div>
 
-
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto1.png" alt="Producto 1" width="260px" height="310px">
+                        <img src="img/producto1.png" alt="Producto 1" width="260px" height="310px">
                         <p>Neon Genesis Evangelion</p>
                         <p>Precio: 22.80€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>¡LLEGA EL QUINTO NIÑO! Con Asuka incapacitada para subir al EVA, es imperativo encontrar a un
                             nuevo piloto para proteger los secretos de NERV. Kaworu Nagisa entra en escena, pilotando
-                            con
-                            maestría, integrándose en el equipo y sin esfuerzo aparente, entablando amistad con Shinji,
-                            que
-                            cada vez está más confuso con la cantidad de secretos que no cesa de descubrir</p>
+                            con maestría, integrándose en el equipo y sin esfuerzo aparente, entablando amistad con
+                            Shinji, que cada vez está más confuso con la cantidad de secretos que no cesa de descubrir
+                        </p>
                         <p class="producto_comp">Producto Comprado</p>
                         <button class="boton_dialogo">Comprar</button>
                     </div>
@@ -83,7 +84,7 @@
             </div>
 
             <div class="producto opener" data-categoria="tendencia" data-categoria="producto">
-                <img src="img_presentacion/producto2.png" alt="Producto 2" width="150px" height="210px">
+                <img src="img/producto2.png" alt="Producto 2" width="150px" height="210px">
                 <p>El món invisible</p>
                 <p>Precio: 7.99€</p>
             </div>
@@ -91,10 +92,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto2.png" alt="Producto 2" width="260px" height="310px">
+                        <img src="img/producto2.png" alt="Producto 2" width="260px" height="310px">
                         <p>El món invisible</p>
                         <p>Precio: 7.99€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Legendaria e icónica figura del anime, Hayao Miyazaki es el director japonés actual más
                             importante. Con un Oscar por El viaje de Chihiro, este autor ha logrado situarse entre los
@@ -107,7 +109,7 @@
             </div>
 
             <div class="producto opener" data-categoria="fantasia" data-categoria="producto">
-                <img src="img_presentacion/producto3.png" alt="Producto 3" width="150px" height="210px">
+                <img src="img/producto3.png" alt="Producto 3" width="150px" height="210px">
                 <p>La trucada de Cthulhu</p>
                 <p>Precio: 20.61€</p>
             </div>
@@ -115,10 +117,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto3.png" alt="Producto 3" width="260px" height="310px">
+                        <img src="img/producto3.png" alt="Producto 3" width="260px" height="310px">
                         <p>La trucada de Cthulhu</p>
                         <p>Precio: 20.61€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>H. P. Lovecraft ha pasado a la historia de la literatura como uno de los grandes innovadores
                             del relato fantástico y de terror del siglo XX. Niño prodigio empezó a leer y escribir su
@@ -135,7 +138,7 @@
             </div>
 
             <div class="producto opener" data-categoria="classics" data-categoria="producto">
-                <img src="img_presentacion/producto4.png" alt="Producto 4" width="150px" height="210px">
+                <img src="img/producto4.png" alt="Producto 4" width="150px" height="210px">
                 <p>Don Quijote</p>
                 <p>Precio: 10.35€</p>
             </div>
@@ -143,10 +146,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto4.png" alt="Producto 4" width="260px" height="310px">
+                        <img src="img/producto4.png" alt="Producto 4" width="260px" height="310px">
                         <p>Don Quijote</p>
                         <p>Precio: 10.35€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Los años 2015 y 2016 conforman un bienio de aniversarios cervantinos. A la celebración del IV
                             Centenario de la publicación de la segunda parte de Don Quijote (2015), le sigue, en 2016,
@@ -158,7 +162,7 @@
             </div>
 
             <div class="producto opener" data-categoria="classics" data-categoria="producto">
-                <img src="img_presentacion/producto5.png" alt="Producto 5" width="150px" height="210px">
+                <img src="img/producto5.png" alt="Producto 5" width="150px" height="210px">
                 <p>Història de dues ciutats</p>
                 <p>Precio: 15.99€</p>
             </div>
@@ -166,10 +170,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto5.png" alt="Producto 5" width="260px" height="310px">
+                        <img src="img/producto5.png" alt="Producto 5" width="260px" height="310px">
                         <p>Història de dues ciutats</p>
                         <p>Precio: 15.99€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>El Londres pacífico pero grotesco del rey Jorge III y el París clamoroso y ensangrentado de
                             la Revolución Francesa son las dos ciudades sobre cuyo fondo se escribe esta inolvidable
@@ -185,7 +190,7 @@
             </div>
 
             <div class="producto opener" data-categoria="fantasia" data-categoria="producto">
-                <img src="img_presentacion/producto6.png" alt="Producto 6" width="150px" height="210px">
+                <img src="img/producto6.png" alt="Producto 6" width="150px" height="210px">
                 <p>El Senyor dels Anells</p>
                 <p>Precio: 20.99€</p>
             </div>
@@ -193,7 +198,7 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto6.png" alt="Producto 6" width="260px" height="310px">
+                        <img src="img/producto6.png" alt="Producto 6" width="260px" height="310px">
                         <p>El Senyor dels Anells</p>
                         <p>Precio: 20.99€</p>
                     </div>
@@ -212,7 +217,7 @@
             </div>
 
             <div class="producto opener" data-categoria="infantil" data-categoria="producto">
-                <img src="img_presentacion/producto7.png" alt="Producto 7" width="150px" height="210px">
+                <img src="img/producto7.png" alt="Producto 7" width="150px" height="210px">
                 <p>El petit príncep</p>
                 <p>Precio: 10.94€</p>
             </div>
@@ -220,7 +225,7 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto7.png" alt="Producto 7" width="260px" height="310px">
+                        <img src="img/producto7.png" alt="Producto 7" width="260px" height="310px">
                         <p>El petit príncep</p>
                         <p>Precio: 10.94€</p>
                     </div>
@@ -236,7 +241,7 @@
             </div>
 
             <div class="producto opener" data-categoria="infantil" data-categoria="producto">
-                <img src="img_presentacion/producto8.png" alt="Producto 8" width="150px" height="210px">
+                <img src="img/producto8.png" alt="Producto 8" width="150px" height="210px">
                 <p>Alícia al país de les meravelles</p>
                 <p>Precio: 6.60€</p>
             </div>
@@ -244,10 +249,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto8.png" alt="Producto 8" width="260px" height="310px">
+                        <img src="img/producto8.png" alt="Producto 8" width="260px" height="310px">
                         <p>Alícia al país de les meravelles</p>
                         <p>Precio: 6.60€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Alícia al país de les meravelles és una novel•la fantàstica que explica com Alícia, quan
                             somia que segueix el Conill Blanc, penetra a la seva llodriguera i hi descobreix un món on
@@ -263,7 +269,7 @@
             </div>
 
             <div class="producto opener" data-categoria="art" data-categoria="producto">
-                <img src="img_presentacion/producto9.png" alt="Producto 9" width="150px" height="210px">
+                <img src="img/producto9.png" alt="Producto 9" width="150px" height="210px">
                 <p>El codi Da Vinci</p>
                 <p>Precio: 5.00€</p>
             </div>
@@ -271,10 +277,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto9.png" alt="Producto 9" width="260px" height="310px">
+                        <img src="img/producto9.png" alt="Producto 9" width="260px" height="310px">
                         <p>El codi Da Vinci</p>
                         <p>Precio: 5.00€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Robert Langdon recibe una llamada en mitad de la noche: el conservador del museo del Louvre
                             ha sido asesinado en extrañas circunstancias y junto a su cadáver ha aparecido un
@@ -288,7 +295,7 @@
             </div>
 
             <div class="producto opener" data-categoria="classics" data-categoria="producto">
-                <img src="img_presentacion/producto10.png" alt="Producto 10" width="150px" height="210px">
+                <img src="img/producto10.png" alt="Producto 10" width="150px" height="210px">
                 <p>El guardià entre el sègol</p>
                 <p>Precio: 11.78€</p>
             </div>
@@ -296,10 +303,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto10.png" alt="Producto 10" width="260px" height="310px">
+                        <img src="img/producto10.png" alt="Producto 10" width="260px" height="310px">
                         <p>El guardià entre el sègol</p>
                         <p>Precio: 11.78€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Els dos llargs dies que Holden Cauldfield, el jove protagonista, passa a Nova York són la
                             seva fugida personal. Fuig del món dels adults, un món que rebutja, intentant protegir la
@@ -313,7 +321,7 @@
             </div>
 
             <div class="producto opener" data-categoria="drama" data-categoria="producto">
-                <img src="img_presentacion/producto11.png" alt="Producto 11" width="150px" height="210px">
+                <img src="img/producto11.png" alt="Producto 11" width="150px" height="210px">
                 <p>L'alquimista</p>
                 <p>Precio: 17.99€</p>
             </div>
@@ -321,10 +329,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto11.png" alt="Producto 11" width="260px" height="310px">
+                        <img src="img/producto11.png" alt="Producto 11" width="260px" height="310px">
                         <p>L'alquimista</p>
                         <p>Precio: 17.99€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Considerado ya un clásico de nuestros días, El Alquimista relata las aventuras de Santiago,
                             un joven pastor andaluz que un día emprende un viaje por las arenas del desierto en busca de
@@ -337,18 +346,19 @@
             </div>
 
             <div class="producto opener" data-categoria="fantasia" data-categoria="producto">
-                <img src="img_presentacion/producto12.png" alt="Producto 12" width="150px" height="210px">
+                <img src="img/producto12.png" alt="Producto 12" width="150px" height="210px">
                 <p>La història interminable</p>
                 <p>Precio: 23.89€</p>
             </div>
-
+            
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto12.png" alt="Producto 12" width="260px" height="310px">
+                        <img src="img/producto12.png" alt="Producto 12" width="260px" height="310px">
                         <p>La història interminable</p>
                         <p>Precio: 23.89€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>La Emperatriz Infantil está mortalmente enferma y su reino, Fantasia, corre un grave peligro.
                             La salvación depende de Atreyu, un valiente guerrero de la tribu de los pieles verdes, y
@@ -363,7 +373,7 @@
             </div>
 
             <div class="producto opener" data-categoria="drama" data-categoria="producto">
-                <img src="img_presentacion/producto13.png" alt="Producto 13" width="150px" height="210px">
+                <img src="img/producto13.png" alt="Producto 13" width="150px" height="210px">
                 <p>El turó de Watership</p>
                 <p>Precio: 10.76€</p>
             </div>
@@ -371,10 +381,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto13.png" alt="Producto 13" width="260px" height="310px">
+                        <img src="img/producto13.png" alt="Producto 13" width="260px" height="310px">
                         <p>El turó de Watership</p>
                         <p>Precio: 10.76€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Quinto, un joven y apacible conejo, sufre unas visiones aterradoras sobre el futuro de su
                             madriguera. Convertido en líder, Quinto y sus inseparables compañeros deciden abandonar
@@ -388,7 +399,7 @@
             </div>
 
             <div class="producto opener" data-categoria="infantil" data-categoria="producto">
-                <img src="img_presentacion/producto14.png" alt="Producto 14" width="150px" height="210px">
+                <img src="img/producto14.png" alt="Producto 14" width="150px" height="210px">
                 <p>La volta al món</p>
                 <p>Precio: 9.80€</p>
             </div>
@@ -396,10 +407,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto14.png" alt="Producto 14" width="260px" height="310px">
+                        <img src="img/producto14.png" alt="Producto 14" width="260px" height="310px">
                         <p>La volta al món</p>
                         <p>Precio: 9.80€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>La Formiga Piga, empesa per estranyes circumstàncies, dóna la volta al món i ho aprofita per
                             escriure les aventures que li passen i per dibuixar les meravelles que contempla: des dels
@@ -413,7 +425,7 @@
             </div>
 
             <div class="producto opener" data-categoria="flora-fauna" data-categoria="producto">
-                <img src="img_presentacion/producto15.png" alt="Producto 15" width="150px" height="210px">
+                <img src="img/producto15.png" alt="Producto 15" width="150px" height="210px">
                 <p>Herbari de plantes silvestres</p>
                 <p>Precio: 22.76€</p>
             </div>
@@ -421,10 +433,11 @@
             <div class="dialog">
                 <div class="general_dialogo">
                     <div class="contenedor2_dialogo">
-                        <img src="img_presentacion/producto15.png" alt="Producto 15" width="260px" height="310px">
+                        <img src="img/producto15.png" alt="Producto 15" width="260px" height="310px">
                         <p>Herbari de plantes silvestres</p>
                         <p>Precio: 22.76€</p>
                     </div>
+
                     <div class="contenedor2_dialogo">
                         <p>Una obra extraordinaria para descubrir la belleza de las plantas de nuestro entorno, que
                             ofrece una visión excepcional de 275 especies de flores, árboles y arbustos europeos,
@@ -441,12 +454,12 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+
     <div id="footer">
         <div id="contenedor">
-            <a href="tienda.html"><img id="logo_footer" src="img_presentacion/logo_footer.png" width="120px" /></a>
+            <img id="logo_footer" src="img/logo_footer.png" width="120px" />
             <div id="contacte">
                 <h3 class="titol_footer">CONTACTE</h3>
                 <p>· 93 688 45 99</p>
